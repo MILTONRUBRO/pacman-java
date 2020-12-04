@@ -14,6 +14,7 @@ public class Entity {
 	protected double y;
 	protected int width;
 	protected int height;
+	protected int speed;
 	public int depth;
 	protected List<Node> path;
 	public boolean debug = false;
@@ -58,6 +59,14 @@ public class Entity {
 	public void setDepth(int depth) {
 		this.depth = depth;
 	}
+	
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
 
 	public List<Node> getPath() {
 		return path;
@@ -75,11 +84,12 @@ public class Entity {
 		this.sprite = sprite;
 	}
 
-	public Entity(double x, double y, int width, int height, BufferedImage sprite) {
+	public Entity(double x, double y, int width, int height, int speed, BufferedImage sprite) {
 		this.x = x;
 		this.y = y;
 		this.width = width;
 		this.height = height;
+		this.speed = speed;
 		this.sprite = sprite;
 	}
 	

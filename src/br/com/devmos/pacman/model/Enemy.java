@@ -1,18 +1,12 @@
 package br.com.devmos.pacman.model;
 
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
 
-public class Enemy {
-	
-	private double x;
-	private double y;
-	private static int WIDTH = 40;
-	private static int HEIGHT = 5;
+public class Enemy extends Entity{
 
-	
-	public Enemy(int x, int y) {
-		this.x = x;
-		this.y = y;
+	public Enemy(double x, double y, int width, int height, int speed, BufferedImage sprite) {
+		super(x, y, width, height, speed, sprite);
 	}
 	
 	public void update() {
@@ -23,36 +17,4 @@ public class Enemy {
 
 	}
 
-	public double getX() {
-		return x;
-	}
-
-	public void setX(double x) {
-		this.x = x;
-	}
-
-	public double getY() {
-		return y;
-	}
-
-	public void setY(double y) {
-		this.y = y;
-	}
-
-	public static int getWIDTH() {
-		return WIDTH;
-	}
-
-	public static void setWIDTH(int wIDTH) {
-		WIDTH = wIDTH;
-	}
-
-	public static int getHEIGHT() {
-		return HEIGHT;
-	}
-
-	public static void setHEIGHT(int hEIGHT) {
-		HEIGHT = hEIGHT;
-	}
-	
 }
